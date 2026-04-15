@@ -5,12 +5,12 @@ import os
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_PUBLIC_URL = os.getenv("DATABASE_PUBLIC_URL")
 
-DATABASE_URL = os.getenv("DATABASE_URL")
-assert DATABASE_URL, "DATABASE_URL is not set"
+DATABASE_PUBLIC_URL = os.getenv("DATABASE_PUBLIC_URL")
+assert DATABASE_PUBLIC_URL, "DATABASE_PUBLIC_URL is not set"
 
-engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_PUBLIC_URL)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
