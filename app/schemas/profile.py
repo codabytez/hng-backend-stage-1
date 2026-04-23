@@ -14,6 +14,7 @@ class ProfileResponse(BaseModel):
     age: Optional[int]
     age_group: Optional[str]
     country_id: Optional[str]
+    country_name: Optional[str]
     country_probability: Optional[float]
     created_at: datetime
 
@@ -27,6 +28,10 @@ class ProfileListItem(BaseModel):
     age: Optional[int]
     age_group: Optional[str]
     country_id: Optional[str]
+    country_name: Optional[str]
+    country_probability: Optional[float]
+    gender_probability: Optional[float]
+    created_at: datetime
 
     class Config:
         from_attributes = True

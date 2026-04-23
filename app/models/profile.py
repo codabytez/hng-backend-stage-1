@@ -13,5 +13,6 @@ class Profile(Base):
     age = Column(Integer, nullable=True)
     age_group = Column(String, nullable=True)
     country_id = Column(String, nullable=True)
+    country_name = Column(String, nullable=True)
     country_probability = Column(Float, nullable=True)
     created_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
